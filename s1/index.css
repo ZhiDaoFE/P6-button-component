@@ -1,3 +1,15 @@
 body {
   padding: 20px;
 }
+
+.btn1 {
+  font-size: 16px;
+  height: 42px;
+  background: #ff4d4f;
+}
+
+.btn2 {
+  background: transparent;
+  color: #000;
+  border-color: #000;
+}

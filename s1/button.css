@@ -1,0 +1,19 @@
+.zd-btn {
+  outline: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 22px;
+  height: 32px;
+  padding: 0 15px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-weight: 400;
+  color: #fff;
+  background: #1677ff;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+}
