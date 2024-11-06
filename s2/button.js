@@ -76,8 +76,6 @@ const Button = ((document) => {
 
     constructor(props = {}) {
       super({...props, cls: props.cls ? `${props.cls} ${defaultCls}` : defaultCls});
-
-      this._text = this.getRoot().innerText;
     }
 
     _build() {
