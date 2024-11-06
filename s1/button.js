@@ -1,7 +1,7 @@
 const BaseComWithDom = ((document) => {
   return class {
-    _dom;
-    _cls;
+    // _dom;
+    // _cls;
 
     constructor(props = {}) {
       const { root, id, cls } = props;
@@ -60,8 +60,8 @@ const BaseComWithDom = ((document) => {
 const Button = ((document) => {
   const defaultCls = 'zd-btn';
   return class extends BaseComWithDom {
-    _text;
-    _onClick;
+    // _text;
+    // _onClick;
 
     constructor(props = {}) {
       super({...props, cls: props.cls ? `${props.cls} ${defaultCls}` : defaultCls});
