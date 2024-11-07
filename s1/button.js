@@ -76,7 +76,7 @@ const Button = ((document) => {
     setText(text = '') {
       text = String(text);
 
-      if (text) {
+      if (text !== this._text) {
         this._text = text;
         this.getRoot().innerText = this._text;
       }

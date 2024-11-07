@@ -100,7 +100,7 @@ const Button = ((document) => {
     setText(text = '') {
       text = String(text);
 
-      if (text && this._textDom) {
+      if (text !== this._text && this._textDom) {
         this._text = text;
         this._textDom.innerText = this._text;
       }
