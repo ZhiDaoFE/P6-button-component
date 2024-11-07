@@ -70,7 +70,7 @@ const Button = ((document) => {
     init(props = {}) {
       const { text, onClick } = props;
 
-      this.setText(text).setOnClick(onClick);
+      this.setText(text || this.getRoot().innerText).setOnClick(onClick);
     }
 
     setText(text = '') {

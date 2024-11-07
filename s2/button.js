@@ -90,7 +90,7 @@ const Button = ((document) => {
 
       const { text, onClick, disabled, iconPosition, icon } = props;
            
-      this.setText(text)
+      this.setText(text || this._text)
         .setIcon(icon)
         .setIconPosition(iconPosition)
         .setDisabled(disabled)
