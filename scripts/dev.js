@@ -6,6 +6,7 @@ const open = require('open');
 const chokidar = require('chokidar');
 const http = require('http');
 const WebSocket = require('ws');
+const babel = require('@babel/core');
 
 const app = new Koa();
 const router = new Router();
@@ -82,6 +83,14 @@ router.get('/folder/:folder/(.*)', async (ctx) => {
       </script>`;
       html = html.replace('</body>', `${wsScript}</body>`); // Inject the script before the closing body tag
       ctx.body = html;
+    } else if (filePath.endsWith('.jsx')) {
+      const code = fs.readFileSync(filePath, 'utf8');
+      const result = babel.transformSync(code, {
+        presets: ['@babel/preset-react'],
+        filename: filePath,
+      });
+      ctx.type = 'application/javascript';
+      ctx.body = result.code;
     } else {
       ctx.type = path.extname(filePath);
       ctx.body = fs.createReadStream(filePath);
