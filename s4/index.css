@@ -1,3 +1,26 @@
 body {
   padding: 20px;
 }
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.zd-btn.btn1 {
+  font-size: 16px;
+  height: 42px;
+  background: #ff4d4f;
+}
+
+.zd-btn.btn2 {
+  background: transparent;
+  color: #000;
+  border-color: #000;
+}
+
+.icon-logo {
+  width: 24px;
+  height: 24px;
+}
